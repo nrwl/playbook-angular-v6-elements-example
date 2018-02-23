@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product-info-card.component';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +10,12 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class AppComponent {
-  product: Product = {name: 'Fresh Salmon', description: 'Caught locally and delivered fresh on ice to your front door. Best market price around!'};
+  product: Product = {
+    name: 'Fresh Salmon',
+    description: 'Caught locally and delivered fresh on ice to your front door. Best market price around!'
+  };
 
   buy(product: Product) {
     console.log(`Purchase ${product.name}`);
   }
-}
-
-interface Product {
-  name: string;
-  description: string;
 }
