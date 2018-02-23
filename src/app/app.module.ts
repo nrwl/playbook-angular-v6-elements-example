@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { CommonUiModule } from './common-ui/common-ui.module';
+import { ProductInfoCardComponent } from './product-info-card.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductInfoCardComponent
   ],
   imports: [
-    BrowserModule,
-    CommonUiModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

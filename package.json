@@ -16,11 +16,13 @@
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
     "@angular/core": "^5.2.0",
+    "@angular/elements": "file:@angular/elements",
     "@angular/forms": "^5.2.0",
     "@angular/http": "^5.2.0",
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@webcomponents/webcomponentsjs": "^1.1.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
