@@ -27,6 +27,13 @@
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
+    },
+    {
+      "name": "elements",
+      "root": "elements",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "outDir": "dist-elements"
     }
   ],
   "e2e": {

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Partner Program</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h1>Partner Program</h1>
+<product-info-card></product-info-card>
+<script>
+  customElements.whenDefined('product-info-card')
+    .then(function () {
+      const el = document.querySelector('product-info-card');
+      el.product = {name: 'Fresh Fish', description: 'Best fish around!'};
+      el.addEventListener('buy', function (e) {
+        console.log(e.detail);
+      });
+    });
+</script>
+</body>
+</html>
