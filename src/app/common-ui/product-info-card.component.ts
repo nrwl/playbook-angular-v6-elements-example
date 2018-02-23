@@ -1,0 +1,66 @@
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
+@Component({
+  selector: 'product-info-card',
+  template: `
+    <header>{{product?.name}}</header>
+    <p>{{product?.description}}</p>
+    <button (click)="buy.emit(product)">Buy Now</button>
+  `,
+  styles: [`
+      :host {
+          font-family: Metropolis, serif;
+          font-size: 16pt;
+          display: inline-block;
+          background: #2E3B44;
+          border-radius: 4px;
+          width: 400px;
+          height: 170px;
+          padding: 26px;
+          color: #ffffff;
+          box-shadow: 0px 4px 14px 1px grey;
+      }
+
+      header {
+          font-size: 1.6em;
+          font-weight: 500;
+          margin-bottom: 20px;
+      }
+
+      p {
+          margin: 8px 0;
+          font-weight: lighter;
+          font-size: 1em;
+          color: lightgray;
+      }
+
+      button {
+          border: 1px solid #03ABEB;
+          background-color: transparent;
+          color: #03ABEB;
+          font-size: .8em;
+          font-weight: lighter;
+          padding: 8px 10px;
+          border-radius: 4px;
+          cursor: pointer;
+          float: right;
+          outline: none;
+      }
+
+      button:hover {
+          color: #fff;
+          background-color: #03ABEB;
+      }
+  `]
+})
+export class ProductInfoCardComponent implements OnInit {
+  @Input() product: { name: string, description: string };
+  @Output() buy = new EventEmitter();
+
+  constructor() {
+  }
+
+  ngOnInit() {
+  }
+
+}
